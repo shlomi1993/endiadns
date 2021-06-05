@@ -22,8 +22,8 @@ put_byte(0x12345678CDEF3456, 0xAB, 0) --> 0xAB345678CDEF3456
 ### Solutions
 
 In this repo you can find two solutions for the question above.
-- Solution using shifts - in the directory solution1_shifts.
-- Solution using Byte-Pointer - in the directory solution2_bytepointer.
+- Solution using shifts - in the directory ex1_solution1_shifts.
+- Solution using Byte-Pointer - in the directory ex1_solution2_bytepointer.
 
 
 
@@ -35,6 +35,8 @@ In this repo you can find two solutions for the question above.
 The difference between different operating systems (Mac, Unix, Windows) is also expressed in the encoding method of different characters.
 In this part we focused on the difference in saving a file in Little and Big Endians, and the difference in encoding a line-break character.
 This solution contains an implementation a program that gets file name and create a new file according to the given flags.
+
+You can find the solution in ex2_solution dictionary.
 
 
 
