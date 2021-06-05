@@ -1,9 +1,11 @@
 # Endiadns
 
-This repo documents my solution to the first exercise in Computer Structure course I took as part of Computer Science B. Sc at Bar-Ilan university.
-The assignment was about data representation in the computer by Little and Big Endians.
+This repo documents my solutions to the first and the second exercises in Computer Structure course I took as part of Computer Science B.Sc at Bar-Ilan university.
+The assignments was about data representation in the computer by Little and Big Endians, and differences between Windwos, Unix and Mac files.
 
-## Questions
+## Part 1
+
+### Questions
 
 The soulution ex1.c answer the following questions:
 
@@ -17,7 +19,7 @@ For example:
 put_byte(0x12345678CDEF3456, 0xAB, 2) --> 0x1234AB78CDEF3456
 put_byte(0x12345678CDEF3456, 0xAB, 0) --> 0xAB345678CDEF3456
 
-## Solutions
+### Solutions
 
 In this repo you can find two solutions for the question above.
 - Solution using shifts - in the directory solution1_shifts.
@@ -26,3 +28,14 @@ In this repo you can find two solutions for the question above.
 
 
 ![image](https://user-images.githubusercontent.com/72878018/120885771-41682080-c5f3-11eb-84b9-1cc1dc742cd6.png)
+
+
+## Part 2
+
+The difference between different operating systems (Mac, Unix, Windows) is also expressed in the encoding method of different characters.
+In this part we focused on the difference in saving a file in Little and Big Endians, and the difference in encoding a line-break character.
+This solution contains an implementation a program that gets file name and create a new file according to the given flags.
+
+
+
+![image](https://user-images.githubusercontent.com/72878018/120886686-ca815680-c5f7-11eb-980e-00e6cb3a2565.png)
