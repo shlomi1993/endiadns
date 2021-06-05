@@ -1,0 +1,142 @@
+#!/bin/bash
+
+echo Starting checker...
+echo compiling ex2
+gcc ex2.c
+echo checking Unix input:
+
+echo 1st option Unix copy file:
+./a.out unix_input-utf-16.txt newfile.txt
+cmp unix_input-utf-16.txt newfile.txt
+
+echo 2nd option Unix to Mac:
+./a.out unix_input-utf-16.txt newfile.txt -unix -mac
+cmp mac_input-utf-16.txt newfile.txt
+
+echo 2nd option Unix to Windows:
+./a.out unix_input-utf-16.txt newfile.txt -unix -win
+cmp win_input-utf-16.txt newfile.txt
+
+echo 2nd option Unix to Unix:
+./a.out unix_input-utf-16.txt newfile.txt -unix -unix
+cmp unix_input-utf-16.txt newfile.txt
+
+echo 3rd option with swap Unix to Mac:
+./a.out unix_input-utf-16.txt newfile.txt -unix -mac -swap
+cmp mac_input-utf-16_swap.txt newfile.txt
+
+echo 3rd option with swap Unix to Windows:
+./a.out unix_input-utf-16.txt newfile.txt -unix -win -swap
+cmp win_input-utf-16_swap.txt newfile.txt
+
+echo 3rd option with swap Unix to Unix:
+./a.out unix_input-utf-16.txt newfile.txt -unix -unix -swap
+cmp unix_input-utf-16_swap.txt newfile.txt
+
+echo 3rd option !without! swap Unix to Mac:
+./a.out unix_input-utf-16.txt newfile.txt -unix -mac -keep
+cmp mac_input-utf-16_keep.txt newfile.txt
+
+echo 3rd option !without! swap Unix to Windows:
+./a.out unix_input-utf-16.txt newfile.txt -unix -win -keep
+cmp win_input-utf-16_keep.txt newfile.txt
+
+echo 3rd option !without! swap Unix to Unix:
+./a.out unix_input-utf-16.txt newfile.txt -unix -unix -keep
+cmp unix_input-utf-16_keep.txt newfile.txt
+
+echo checking Mac input:
+
+echo 1st option mac copy file:
+./a.out mac_input-utf-16.txt newfile.txt
+cmp mac_input-utf-16.txt newfile.txt
+
+echo 2nd option mac to Mac:
+./a.out mac_input-utf-16.txt newfile.txt -mac -mac
+cmp mac_input-utf-16.txt newfile.txt
+
+echo 2nd option mac to Windows:
+./a.out mac_input-utf-16.txt newfile.txt -mac -win
+cmp win_input-utf-16.txt newfile.txt
+
+echo 2nd option mac to Unix:
+./a.out mac_input-utf-16.txt newfile.txt -mac -unix
+cmp unix_input-utf-16.txt newfile.txt
+
+echo 3rd option with swap Mac to Mac:
+./a.out mac_input-utf-16.txt newfile.txt -mac -mac -swap
+cmp mac_input-utf-16_swap.txt newfile.txt
+
+echo 3rd option with swap Mac to Windows:
+./a.out mac_input-utf-16.txt newfile.txt -mac -win -swap
+cmp win_input-utf-16_swap.txt newfile.txt
+
+echo 3rd option with swap Mac to Unix:
+./a.out mac_input-utf-16.txt newfile.txt -mac -unix -swap
+cmp unix_input-utf-16_swap.txt newfile.txt
+
+echo 3rd option !without! swap Mac to Mac:
+./a.out mac_input-utf-16.txt newfile.txt -mac -mac -keep
+cmp mac_input-utf-16_keep.txt newfile.txt
+
+echo 3rd option !without! swap Mac to Windows:
+./a.out mac_input-utf-16.txt newfile.txt -mac -win -keep
+cmp win_input-utf-16_keep.txt newfile.txt
+
+echo 3rd option !without! swap Mac to Unix:
+./a.out mac_input-utf-16.txt newfile.txt -mac -unix -keep
+cmp unix_input-utf-16_keep.txt newfile.txt
+
+echo checking Windows input:
+
+echo 1st option Windows copy file:
+./a.out win_input-utf-16.txt newfile.txt
+cmp win_input-utf-16.txt newfile.txt
+
+echo 2nd option Windows to Mac:
+./a.out win_input-utf-16.txt newfile.txt -win -mac
+cmp mac_input-utf-16.txt newfile.txt
+
+echo 2nd option Windows to Windows:
+./a.out win_input-utf-16.txt newfile.txt -win -win
+cmp win_input-utf-16.txt newfile.txt
+
+echo 2nd option win to Unix:
+./a.out win_input-utf-16.txt newfile.txt -win -unix
+cmp unix_input-utf-16.txt newfile.txt
+
+echo 3rd option with swap Windows to Mac:
+./a.out win_input-utf-16.txt newfile.txt -win -mac -swap
+cmp mac_input-utf-16_swap.txt newfile.txt
+
+echo 3rd option with swap Windows to Windows:
+./a.out win_input-utf-16.txt newfile.txt -win -win -swap
+cmp win_input-utf-16_swap.txt newfile.txt
+
+echo 3rd option with swap Windows to Unix:
+./a.out win_input-utf-16.txt newfile.txt -win -unix -swap
+cmp unix_input-utf-16_swap.txt newfile.txt
+
+echo 3rd option !without! swap Windows to Mac:
+./a.out win_input-utf-16.txt newfile.txt -win -mac -keep
+cmp mac_input-utf-16_keep.txt newfile.txt
+
+echo 3rd option !without! swap Windows to Windows:
+./a.out win_input-utf-16.txt newfile.txt -win -win -keep
+cmp win_input-utf-16_keep.txt newfile.txt
+
+echo 3rd option !without! swap Windows to Unix:
+./a.out win_input-utf-16.txt newfile.txt -win -unix -keep
+cmp unix_input-utf-16_keep.txt newfile.txt
+
+echo checking no args and flags error:
+./a.out
+
+echo cheking only one arg given:
+./a.out mac_input-utf-16.txt
+
+echo cheking only one OS flag given:
+./a.out mac_input-utf-16.txt newfile.txt -mac
+
+echo cheking if input is invalid:
+./a.out blablabla.txt newfile.txt
