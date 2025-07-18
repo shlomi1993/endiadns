@@ -1,5 +1,3 @@
-// 311408264 Shlomi Ben-Shushan
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
