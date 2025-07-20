@@ -26,7 +26,6 @@ In this repo you can find two solutions for the question above.
 - Solution using Byte-Pointer - in the directory ex1_solution2_bytepointer.
 
 
-
 ![image](https://user-images.githubusercontent.com/72878018/120885771-41682080-c5f3-11eb-84b9-1cc1dc742cd6.png)
 
 
